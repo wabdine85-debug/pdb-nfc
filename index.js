@@ -33,6 +33,16 @@ function track(routeName) {
 const haseReview =
   "https://search.google.com/local/writereview?placeid=ChIJaVo3xfy9vUcRc0bQwHzOFkc&forceDesktop=true";
 
+// 👉 **NEU**: Route für UptimeRobot (GET /)
+app.get("/", (req, res) => {
+  res.send("OK");
+});
+
+// 👉 **NEU**: HEAD-Route für UptimeRobot (HEAD /)
+app.head("/", (req, res) => {
+  res.status(200).end();
+});
+
 // 5 NFC-Aufsteller / 5 Tracking-Events
 app.get("/hase1", (req, res) => {
   track("hase1");
