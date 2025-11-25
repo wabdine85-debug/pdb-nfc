@@ -69,5 +69,14 @@ app.get("/hase5", (req, res) => {
   res.redirect(haseReview);
 });
 
+// Google Review Link – B34 Shisha Bar
+const b34Review =
+  "https://search.google.com/local/writereview?placeid=ChIJl-VuRHS-vUcR0EetKMUSZaE";
+// NFC-Aufsteller DEMO – B34 Shisha Bar
+app.get("/b34-demo", (req, res) => {
+  track("b34-demo");
+  res.redirect(b34Review);
+});
+
 // PORT für Render
 app.listen(process.env.PORT || 3000);
