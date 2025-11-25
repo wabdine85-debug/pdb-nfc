@@ -86,5 +86,13 @@ app.get("/pizza-fritze-demo", (req, res) => {
   res.redirect(pizzaFritzeReview);
 });
 
+// Google Review Link – La Maison du Pain
+const laMaisonReview =
+  "https://search.google.com/local/writereview?placeid=ChIJ5-5_VW69vUcRzR-_JrLfNmc";
+app.get("/la-maison-demo", (req, res) => {
+  track("la-maison-demo");
+  res.redirect(laMaisonReview);
+});
+
 // PORT für Render
 app.listen(process.env.PORT || 3000);
