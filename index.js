@@ -78,5 +78,13 @@ app.get("/b34-demo", (req, res) => {
   res.redirect(b34Review);
 });
 
+// Google Review Link – Pizza Fritze
+const pizzaFritzeReview =
+  "https://search.google.com/local/writereview?placeid=ChIJw6P92IG9vUcRD9JwtevKfz0";
+app.get("/pizza-fritze-demo", (req, res) => {
+  track("pizza-fritze-demo");
+  res.redirect(pizzaFritzeReview);
+});
+
 // PORT für Render
 app.listen(process.env.PORT || 3000);
