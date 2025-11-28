@@ -94,5 +94,11 @@ app.get("/la-maison-demo", (req, res) => {
   res.redirect(laMaisonReview);
 });
 
+// Google Review Link – Wiener Feinbäcker
+app.get("/wiener-feinbaecker", (req, res) => {
+  res.redirect("https://www.google.com/maps/place/?q=place_id:ChIJPaRL_q4OvUcRY3egtiM5wA4");
+});
+
+
 // PORT für Render
 app.listen(process.env.PORT || 3000);
