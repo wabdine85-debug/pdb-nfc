@@ -94,44 +94,13 @@ app.get("/la-maison-demo", (req, res) => {
   res.redirect(laMaisonReview);
 });
 
-// Google Review Link – Wiener Feinbäcker
-app.get("/wiener-heberer-review", (req, res) => {
-  res.send(`
-    <html>
-      <head>
-        <meta charset="utf-8" />
-        <title>Wiener Feinbäcker Heberer Bewertung</title>
-        <style>
-          body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 60px;
-            background-color: #f7f7f7;
-          }
-          h2 { color: #333; }
-          a.button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 14px 28px;
-            background: #d9bfa9;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 16px;
-          }
-        </style>
-      </head>
-      <body>
-        <h2>Wiener Feinbäcker Heberer – Bewertung</h2>
-        <p>Tippen Sie unten, um eine Google Bewertung abzugeben.</p>
-        <a class="button" href="https://www.google.com/maps/place/Wiener+Feinbäcker+Heberer/@50.1143255,8.6761161,975m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47bd0eaefe4ba43d:0xec03923b6a07763!8m2!3d50.1143221!4d8.6786964!16s%2Fg%2F1thsqhmn?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D" target="_blank">
-          ⭐ Jetzt bewerten
-        </a>
-      </body>
-    </html>
-  `);
+// Google Review Link – Wiener Feinbäcker Heberer
+app.get("/wiener-heberer", (req, res) => {
+  res.redirect(
+    "https://www.google.com/maps/place/Wiener+Feinbäcker+Heberer/@50.1143255,8.6761161,975m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47bd0eaefe4ba43d:0xec03923b6a07763!8m2!3d50.1143221!4d8.6786964!16s%2Fg%2F1thsqhmn?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
+  );
 });
+
 
 
 // PORT für Render
