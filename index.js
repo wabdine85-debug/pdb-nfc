@@ -109,6 +109,10 @@ app.get("/cafe-stadtkind", (req, res) => {
   res.redirect(cafeStadtkindReview);
 });
 
+app.get("/test123", (req, res) => {
+  track("test123");
+  res.send("Test-Event gesendet!");
+});
 
 
 // PORT für Render
