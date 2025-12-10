@@ -101,6 +101,10 @@ app.get("/wiener-heberer", (req, res) => {
   );
 });
 
+app.get("/cafe-stadtkind", (req, res) => {
+  sendEvent("cafe_stadtkind_click");
+  res.redirect("https://search.google.com/local/writereview?placeid=ChIJ1wbYYwC9vUcRZ6eyF7IKjkw");
+});
 
 
 // PORT für Render
