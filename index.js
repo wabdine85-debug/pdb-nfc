@@ -101,10 +101,14 @@ app.get("/wiener-heberer", (req, res) => {
   );
 });
 
+// Google Review Link – Café Stadtkind
+const cafeStadtkindReview =
+  "https://search.google.com/local/writereview?placeid=ChIJ1wbYYwC9vUcRZ6eyF7IKjkw";
 app.get("/cafe-stadtkind", (req, res) => {
-  sendEvent("cafe_stadtkind_click");
-  res.redirect("https://search.google.com/local/writereview?placeid=ChIJ1wbYYwC9vUcRZ6eyF7IKjkw");
+  track("cafe-stadtkind");
+  res.redirect(cafeStadtkindReview);
 });
+
 
 
 // PORT für Render
