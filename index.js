@@ -114,6 +114,15 @@ app.get("/test123", (req, res) => {
   res.send("Test-Event gesendet!");
 });
 
+// Google Review Link – Filly Coffee & Sandos
+const fillyCoffeeSandosReview =
+  "https://search.google.com/local/writereview?placeid=ChIJ3f5dsS29vUcRepHGz5uuqi8";
+
+app.get("/filly-coffee-sandos", (req, res) => {
+  track("filly-coffee-sandos");
+  res.redirect(fillyCoffeeSandosReview);
+});
+
 
 // PORT für Render
 app.listen(process.env.PORT || 3000);
