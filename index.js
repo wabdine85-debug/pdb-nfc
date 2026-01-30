@@ -123,6 +123,28 @@ app.get("/filly-coffee-sandos", (req, res) => {
   res.redirect(fillyCoffeeSandosReview);
 });
 
+// Google Review Link – Schmarrnzeit
+const schmarrnzeitReview =
+  "https://search.google.com/local/writereview?placeid=ChIJ20mNrlu9vUcR_Zw637qjCBI";
+
+// Aufsteller 1
+app.get("/schmarrnzeit-1", (req, res) => {
+  track("schmarrnzeit-1");
+  res.redirect(schmarrnzeitReview);
+});
+
+// Aufsteller 2
+app.get("/schmarrnzeit-2", (req, res) => {
+  track("schmarrnzeit-2");
+  res.redirect(schmarrnzeitReview);
+});
+
+// Aufsteller 3
+app.get("/schmarrnzeit-3", (req, res) => {
+  track("schmarrnzeit-3");
+  res.redirect(schmarrnzeitReview);
+});
+
 
 // PORT für Render
 app.listen(process.env.PORT || 3000);
