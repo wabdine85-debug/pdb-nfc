@@ -81,10 +81,41 @@ app.get("/b34-demo", (req, res) => {
 // Google Review Link – Pizza Fritze
 const pizzaFritzeReview =
   "https://search.google.com/local/writereview?placeid=ChIJw6P92IG9vUcRD9JwtevKfz0";
+
+/**
+ * Aufsteller 1 (physisch = alter Demo-Aufsteller)
+ * URL bleibt /pizza-fritze-demo
+ * Tracking zählt ihn als Nummer 1
+ */
 app.get("/pizza-fritze-demo", (req, res) => {
-  track("pizza-fritze-demo");
+  track("pizza-fritze-1");
   res.redirect(pizzaFritzeReview);
 });
+
+// Aufsteller 2
+app.get("/pizza-fritze-2", (req, res) => {
+  track("pizza-fritze-2");
+  res.redirect(pizzaFritzeReview);
+});
+
+// Aufsteller 3
+app.get("/pizza-fritze-3", (req, res) => {
+  track("pizza-fritze-3");
+  res.redirect(pizzaFritzeReview);
+});
+
+// Aufsteller 4
+app.get("/pizza-fritze-4", (req, res) => {
+  track("pizza-fritze-4");
+  res.redirect(pizzaFritzeReview);
+});
+
+// Aufsteller 5
+app.get("/pizza-fritze-5", (req, res) => {
+  track("pizza-fritze-5");
+  res.redirect(pizzaFritzeReview);
+});
+
 
 // Google Review Link – La Maison du Pain
 const laMaisonReview =
